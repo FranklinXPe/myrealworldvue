@@ -71,6 +71,106 @@
           "name": "Mary Gordon"
         }
       ]
+    },
+    {
+      "id": 3380016,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "title housing xD",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 3121490,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Planting trees",
+      "description": "We're going to plant trees",
+      "location": "The forest",
+      "date": "2020-01-09T19:29:00.000Z",
+      "time": "11:00",
+      "attendees": []
+    },
+    {
+      "id": 4057081,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "food",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "foot a lot",
+      "description": "descriptin ",
+      "location": "localtion",
+      "date": "2020-01-01T19:35:00.000Z",
+      "time": "19:00",
+      "attendees": []
+    },
+    {
+      "id": 7,
+      "title": "Beach Cleanup 7",
+      "date": "Aug 28 2020",
+      "time": "08:00",
+      "location": "Daytona Funny",
+      "description": "Let's clean up this beach.",
+      "organizer": "Franklin Jahr",
+      "category": "sustainability",
+      "attendees": [
+        {
+          "id": "abc123",
+          "name": "Adam Jahr"
+        },
+        {
+          "id": "def456",
+          "name": "Gregg Pollack"
+        },
+        {
+          "id": "ghi789",
+          "name": "Beth Swanson"
+        },
+        {
+          "id": "jkl101",
+          "name": "Mary Gordon"
+        }
+      ]
+    },
+    {
+      "id": 8364289,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "SUCCESS!!!",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
+import store from './store/store'
 
 /*=== INICIO CODE SNIPPED: Automatic Global Registration of Base Components ===*/
 import upperFirst from 'lodash/upperFirst'
@@ -44,6 +44,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  store,
+  store, // Inserta el "store" en todos los componentes
   render: h => h(App)
 }).$mount('#app')

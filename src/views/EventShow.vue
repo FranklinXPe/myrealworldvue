@@ -3,7 +3,7 @@
         <div class="event-header">
           <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
           <h1 class="title">{{ event.title }}</h1>
-          <h5>Organized by {{ event.organizer }}</h5>
+          <h5>Organized by {{ event.organizer? event.organizer.name :'' }}</h5>
           <h5>Category: {{ event.category }}</h5>
         </div>
         <BaseIcon name="map"><h2>Location</h2></BaseIcon>
@@ -22,23 +22,28 @@
 </template>
 
 <script>
-import EventService from '@/services/EventService.js'
+import {mapState, mapActions} from 'vuex'
+
 export default {
   props: ['id'],
-  data() {
-    return {
-      event: {}
-    }
-  },
   created() {
-    EventService.getEvent(this.id)
-      .then(response => {
-        this.event = response.data
-      })
-      .catch(error => {
-        console.log('There was an error:', error.response)
-      })
-  }
+  
+  // Ya que tenemos activado el Module Namespacing, en el dispatch podemos hacer esto: event/fetchEvent
+  
+  // this.$store.dispatch('event/fetchEvent',this.id) <== esto era antes de usar el Module Namespacing
+
+  //Ahora que utilizamos el "mapActions" y queremos acceder al Action de Event
+  this.fetchEvent(this.id)
+
+  },
+  computed:mapState({
+    //Para no cambiar todos los valores "event" que esta en la seccion "template"
+    //por "event.event". Mejor el mapState lo represetamos como un objeto y ya no
+    //como un arreglo
+    event:state => state.event.event
+  }),
+  methods: mapActions('event',['fetchEvent']) // es lo mismo a mapActions(['event/fetchEvent'])
+
 }
 </script>
    <style scoped>

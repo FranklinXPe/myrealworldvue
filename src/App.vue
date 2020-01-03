@@ -1,14 +1,20 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-    <router-view />
+    <NotificationContainer />
+
+    <!-- Le agregamos el :key="$route.fullPath" para que pueda refrescar 
+    los datos cuando se de la paginacion. En otras palabras, recarga los componentes
+    cuando la URL cambia, incluyendo los parametros de consulta en la URL-->
+    <router-view :key="$route.fullPath" />
   </div>
 </template>
 
 <script>
 import NavBar from '@/components/NavBar.vue'
+import NotificationContainer from '@/components/NotificationContainer.vue'
 export default {
-  components: { NavBar }
+  components: { NavBar, NotificationContainer }
 }
 </script>
 
